@@ -1,7 +1,5 @@
-var buttonTest, buttonRock, buttonPaper, buttonScissors, argButtonName, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+var buttonRock, buttonPaper, buttonScissors, argButtonName, argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
 
-
-buttonTest = document.getElementById('button-test');
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
@@ -53,9 +51,6 @@ function displayResult(argPlayerMove, argComputerMove) {
 }
 
 
-
-buttonTest.addEventListener('click', function(){
-  buttonClicked('Guzik TEST');});
 buttonRock.addEventListener('click', function(){
   buttonClicked('kamień');});
 buttonPaper.addEventListener('click', function(){
