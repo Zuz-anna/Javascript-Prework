@@ -1,7 +1,7 @@
 /* Variables */ 
 $bg-main: #B7B6F7; //blue
-$bg-hover: #D8B6F7; //violett
-$details-1: #F7B6D6; //pink
+$details-5: #0C0D59; //navy blue icon
+$details-1: #B5E8FF; //turquise icon
 $details-2: #B6F6F7; //turquise
 $details-3: #000; //black
 $details-4: #fff; //white
@@ -85,17 +85,13 @@ section{
     margin: 50px auto;
     width: 50%;
     .guide-content{
-        margin-bottom: 64px;
+        margin-bottom: 32px;
         padding-left: 9.6px;
         font-size: 15px;
         *list-style: decimal;
         list-style: none;
         font-family: $font-family;
         counter-reset: li;    //Initiate a counter !!
-        .item-a{
-            padding: 6px; 
-            text-align: center;
-        }
 
         .item::before{
             content: counter(li);
@@ -135,6 +131,77 @@ section{
             color: $details-4;
             transition: all .3s ease-out;
         }
+        .item-a{
+            padding: 6px; 
+            text-align: center;
+            background: $font-h;
+            color: $details-4;
+        }
+        .item-a:hover{
+            background: $font-h;
+            color: $details-2;
+        }
     }
 }
 //Guide END
+
+//Game content
+.buttons{
+    margin-top: -25px;
+}
+
+button{
+    border: none;
+    font-size: 0;
+    background: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+button:hover,
+button:focus{
+    border: none;
+    background: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+.game-content i{
+    height: 60px;
+    width: 60px;
+    font-size: 35px;
+    line-height: 1.7;
+    background: $details-5;
+    color: $details-4;
+    border-radius: 50%;
+    text-align: center;
+    transition: .5s all ease-in;
+    bordeer: none;
+}
+.game-content i:hover{
+    background: darken($details-2, 10%);
+    color: $details-5;
+    transform: scale(1.2, 1.2);
+    transition: .5s all ease-in;
+}
+.game-content i:focus{
+    background: darken($details-2, 10%);
+    color: $details-5;
+    transform: scale(1.2, 1.2);
+    transition: .5s all ease-in;
+}
+.game-content i:active{
+    border: 1px solid $details-3;
+    border-radius: 50%;
+}
+
+.messages{
+    background: $details-2;
+}
+
+//Game content
