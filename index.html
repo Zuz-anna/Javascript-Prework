@@ -3,26 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Signika:wght@300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="intro">
-		<div class="intro-inner">
-			<div class="container">
-				<h2 class="page-title">Zagraj ze mną!</h2>
-			</div>
-		</div>	
-	</header>
+	<section>
+		<header class="intro">
+			<div class="intro-inner">
+				<div class="container">
+					<h2 class="page-title title">Zagraj ze mną!</h2>
+				</div>
+			</div>	
+		</header>
+	</section>
 	<section class="guide-box">
 		<div class="guide-box-inner">
 			<div class="container">
-				<h3 class="guide-title">Zasady gry</h3>
-				<ul class="guide-content">
-					<li class="guide-item">
+				<h3 class="guide-title title">Instrukcja gry</h3>
+				<ol class="guide-content">
+					<li class="guide-item item-a">WYBIERZ SWÓJ RUCH I NACIŚNIJ DEDYKOWANY MU PRZYCISK - <b>POWODZENIA!</b> 		
 					</li>
-					<li class="guide-item">
+					<li class="guide-item item"><b>KAMIEŃ</b> bije <b>NOŻYCE</b>
 					</li>
-					<li class="guide-item">
+					<li class="guide-item item"><b>PAPIER</b> bije <b>KAMIEŃ</b>
+					</li>
+					<li class="guide-item item"><b>NOŻYCE</b> biją <b>PAPIER</b>
 					</li>
 				</ul>
 			</div>
@@ -30,10 +37,10 @@
 	</section>
 	<section class="game-content">
 		<div class="container">
-			<div id="buttons">
-				<button id="button-rock">kamień</button>
-				<button id="button-paper">papier</button>
-				<button id="button-scissors">nożyce</button>
+			<div id="buttons" class="buttons">
+				<button id="button-rock" class="button"><i class="far fa-hand-rock"></i>kamień</button>
+				<button id="button-paper" class="button"><i class="far fa-hand-paper"></i>papier</button>
+				<button id="button-scissors" class="button"><i class="far fa-hand-scissors"></i>nożyce</button>
 			</div>
 			<div id="messages"></div>
 			<div id="results"></div>

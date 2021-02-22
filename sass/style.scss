@@ -1,6 +1,140 @@
 /* Variables */ 
+$bg-main: #B7B6F7; //blue
+$bg-hover: #D8B6F7; //violett
+$details-1: #F7B6D6; //pink
+$details-2: #B6F6F7; //turquise
+$details-3: #000; //black
+$details-4: #fff; //white
+$font: #0E0E38; //navy blue
+$font-h: #1A194D; //lighter navy blue
+$font-family: 'Signika', sans-serif;
+$font-family-h: 'Anton', sans-serif;
 
 
+//Global
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
 
 body{
+    margin: 0;
+    text-align: center;
+    color: $font;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-family;  
 }
+
+section{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1140px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+//Global END
+
+//Header 
+.page-title{
+    position: relative;
+    font-size: 48px;
+    margin: 30px;
+    font-family: $font-family-h;
+    color: $font-h;
+ }
+ .page-title::after{
+    position: absolute;
+    content: ' ';
+    width: 220px;
+    height: 8px;
+    background: $details-2;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+//Header END
+
+//Guide
+.guide-title{
+    position: relative;
+    font-size: 36px;
+    margin-top: 10px;
+    font-family: $font-family-h;
+    color: $font-h;
+}
+
+.guide-title::after{
+    position: absolute;
+    content: ' ';
+    width: 120px;
+    height: 5px;
+    background: $details-2;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.guide-box{
+    border: 1px solid $details-3;
+    margin: 50px auto;
+    width: 50%;
+    .guide-content{
+        margin-bottom: 64px;
+        padding-left: 9.6px;
+        font-size: 15px;
+        *list-style: decimal;
+        list-style: none;
+        font-family: $font-family;
+        counter-reset: li;    //Initiate a counter !!
+        .item-a{
+            padding: 6px; 
+            text-align: center;
+        }
+
+        .item::before{
+            content: counter(li);
+            counter-increment: li;
+            position: absolute;
+            left: -1em;
+            top: .1em;
+            background: $font-h;
+            height: 2.4em;
+            width: 2.4em;
+            line-height: 1.8em;   //Centering counting number into circle
+            border: .2em solid $details-4;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 2.2em;
+            transition: all .3s ease-out;
+            color:$details-4;
+        }
+        .item:hover::before{
+            transform: rotate(360deg)
+        }
+        .guide-item{
+            position: relative;
+            display: block;
+            padding: 6.4px 6.4px 6.4px 32px;
+            *padding: 6.4px;
+            margin: 8px 0;
+            background: $bg-main;
+            color: $font;
+            text-decoration: none;
+            border-radius: 4.8px;
+            transition: all .3s ease-out;
+            font-family: $font-family;
+        }
+        .guide-item:hover{
+            background: $font-h;
+            color: $details-4;
+            transition: all .3s ease-out;
+        }
+    }
+}
+//Guide END

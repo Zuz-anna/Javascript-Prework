@@ -1,2 +1,127 @@
 /* Variables */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: #0E0E38;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: "Signika", sans-serif;
+}
+
+section {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1140px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  position: relative;
+  font-size: 48px;
+  margin: 30px;
+  font-family: "Anton", sans-serif;
+  color: #1A194D;
+}
+
+.page-title::after {
+  position: absolute;
+  content: ' ';
+  width: 220px;
+  height: 8px;
+  background: #B6F6F7;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.guide-title {
+  position: relative;
+  font-size: 36px;
+  margin-top: 10px;
+  font-family: "Anton", sans-serif;
+  color: #1A194D;
+}
+
+.guide-title::after {
+  position: absolute;
+  content: ' ';
+  width: 120px;
+  height: 5px;
+  background: #B6F6F7;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.guide-box {
+  border: 1px solid #000;
+  margin: 50px auto;
+  width: 50%;
+}
+
+.guide-box .guide-content {
+  margin-bottom: 64px;
+  padding-left: 9.6px;
+  font-size: 15px;
+  *list-style: decimal;
+  list-style: none;
+  font-family: "Signika", sans-serif;
+  counter-reset: li;
+}
+
+.guide-box .guide-content .item-a {
+  padding: 6px;
+  text-align: center;
+}
+
+.guide-box .guide-content .item::before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1em;
+  top: .1em;
+  background: #1A194D;
+  height: 2.4em;
+  width: 2.4em;
+  line-height: 1.8em;
+  border: 0.2em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2.2em;
+  transition: all .3s ease-out;
+  color: #fff;
+}
+
+.guide-box .guide-content .item:hover::before {
+  transform: rotate(360deg);
+}
+
+.guide-box .guide-content .guide-item {
+  position: relative;
+  display: block;
+  padding: 6.4px 6.4px 6.4px 32px;
+  *padding: 6.4px;
+  margin: 8px 0;
+  background: #B7B6F7;
+  color: #0E0E38;
+  text-decoration: none;
+  border-radius: 4.8px;
+  transition: all .3s ease-out;
+  font-family: "Signika", sans-serif;
+}
+
+.guide-box .guide-content .guide-item:hover {
+  background: #1A194D;
+  color: #fff;
+  transition: all .3s ease-out;
+}
 /*# sourceMappingURL=style.css.map */
