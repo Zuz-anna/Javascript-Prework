@@ -181,7 +181,7 @@ button:focus{
     border-radius: 50%;
     text-align: center;
     transition: .5s all ease-in;
-    bordeer: none;
+    border: none;
 }
 .game-content i:hover{
     background: darken($details-2, 10%);
@@ -199,9 +199,4 @@ button:focus{
     border: 1px solid $details-3;
     border-radius: 50%;
 }
-
-.messages{
-    background: $details-2;
-}
-
 //Game content
