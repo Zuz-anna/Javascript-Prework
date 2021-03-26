@@ -23,8 +23,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.26.14",
+    "autoprefixer-cli": "1.0.0",
+    "browser-sync": "2.26.14",
     "html-validate": "^4.6.0",
     "mkdirp": "^1.0.4",
     "node-sass": "^5.0.0",

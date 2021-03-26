@@ -11,80 +11,78 @@ $font-family: 'Signika', sans-serif;
 $font-family-h: 'Anton', sans-serif;
 
 
+
 //Global
 
-*, *::before, *::after{
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     text-align: center;
     color: $font;
     font-size: 16px;
     line-height: 1.7;
     font-family: $font-family;  
-}
-
-section{
-    padding: 0;
-    margin: 0;
-}
-
-.container{
-    max-width: 1140px;
-    min-width: 300px;
-    margin: 0 auto;
-    padding: 0 20px;
+    section {
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+        max-width: 1140px;
+        min-width: 300px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
 
 //Global END
 
 //Header 
-.page-title{
+.page-title {
     position: relative;
     font-size: 48px;
     margin: 30px;
     font-family: $font-family-h;
     color: $font-h;
+    &::after {
+        position: absolute;
+        content: ' ';
+        width: 220px;
+        height: 8px;
+        background: $details-2;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
  }
- .page-title::after{
-    position: absolute;
-    content: ' ';
-    width: 220px;
-    height: 8px;
-    background: $details-2;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
 //Header END
 
 //Guide
-.guide-title{
-    position: relative;
-    font-size: 36px;
-    margin-top: 10px;
-    font-family: $font-family-h;
-    color: $font-h;
-}
 
-.guide-title::after{
-    position: absolute;
-    content: ' ';
-    width: 120px;
-    height: 5px;
-    background: $details-2;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.guide-box{
+.guide-box {
     border: 1px solid $details-3;
     margin: 50px auto;
     width: 50%;
-    .guide-content{
+    .guide-title {
+        position: relative;
+        font-size: 36px;
+        margin-top: 10px;
+        font-family: $font-family-h;
+        color: $font-h;
+        &::after {
+            position: absolute;
+            content: ' ';
+            width: 120px;
+            height: 5px;
+            background: $details-2;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .guide-content {
         margin-bottom: 32px;
         padding-left: 9.6px;
         font-size: 15px;
@@ -92,28 +90,7 @@ section{
         list-style: none;
         font-family: $font-family;
         counter-reset: li;    //Initiate a counter !!
-
-        .item::before{
-            content: counter(li);
-            counter-increment: li;
-            position: absolute;
-            left: -1em;
-            top: .1em;
-            background: $font-h;
-            height: 2.4em;
-            width: 2.4em;
-            line-height: 1.8em;   //Centering counting number into circle
-            border: .2em solid $details-4;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 2.2em;
-            transition: all .3s ease-out;
-            color:$details-4;
-        }
-        .item:hover::before{
-            transform: rotate(360deg)
-        }
-        .guide-item{
+        .guide-item {
             position: relative;
             display: block;
             padding: 6.4px 6.4px 6.4px 32px;
@@ -125,78 +102,105 @@ section{
             border-radius: 4.8px;
             transition: all .3s ease-out;
             font-family: $font-family;
+            &:hover {
+                background: $font-h;
+                color: $details-4;
+                transition: all .3s ease-out;
+            }
         }
-        .guide-item:hover{
-            background: $font-h;
-            color: $details-4;
-            transition: all .3s ease-out;
+        .item {
+            &::before {
+                content: counter(li);
+                counter-increment: li;
+                position: absolute;
+                left: -1em;
+                top: .1em;
+                background: $font-h;
+                height: 2.4em;
+                width: 2.4em;
+                line-height: 1.8em;   //Centering counting number into circle
+                border: .2em solid $details-4;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 2.2em;
+                transition: all .3s ease-out;
+                color:$details-4;
+            }
+            &:hover {
+                &::before {
+                    transform: rotate(360deg)
+                }
+            }
         }
-        .item-a{
+        .item-a {
             padding: 6px; 
             text-align: center;
             background: $font-h;
             color: $details-4;
+            &:hover {
+                background: $font-h;
+                color: $details-2;
+            }
         }
-        .item-a:hover{
-            background: $font-h;
-            color: $details-2;
-        }
+
     }
 }
+
 //Guide END
 
 //Game content
-.buttons{
-    margin-top: -25px;
+
+.game-content {
+    i {
+        height: 60px;
+        width: 60px;
+        font-size: 35px;
+        line-height: 1.7;
+        background: $details-5;
+        color: $details-4;
+        border-radius: 50%;
+        text-align: center;
+        transition: .5s all ease-in;
+        border: none;
+        &:hover {
+            background: darken($details-2, 10%);
+            color: $details-5;
+            transform: scale(1.2, 1.2);
+            transition: .5s all ease-in;
+        }
+        &:focus {
+            background: darken($details-2, 10%);
+            color: $details-5;
+            transform: scale(1.2, 1.2);
+            transition: .5s all ease-in;
+        }
+        &:active {
+            border: 1px solid $details-3;
+            border-radius: 50%;
+        }
+    }
+    .buttons{
+        margin-top: -25px;
+        button{
+            border: none;
+            font-size: 0;
+            background: none;
+            text-decoration: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            margin: 0;
+            margin-bottom: 25px;
+            &:hover, :focus{
+                border: none;
+                background: none;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
 }
 
-button{
-    border: none;
-    font-size: 0;
-    background: none;
-    text-decoration: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    margin: 0;
-    margin-bottom: 25px;
-}
-
-button:hover,
-button:focus{
-    border: none;
-    background: none;
-}
-
-button:focus{
-    outline: none;
-}
-
-.game-content i{
-    height: 60px;
-    width: 60px;
-    font-size: 35px;
-    line-height: 1.7;
-    background: $details-5;
-    color: $details-4;
-    border-radius: 50%;
-    text-align: center;
-    transition: .5s all ease-in;
-    border: none;
-}
-.game-content i:hover{
-    background: darken($details-2, 10%);
-    color: $details-5;
-    transform: scale(1.2, 1.2);
-    transition: .5s all ease-in;
-}
-.game-content i:focus{
-    background: darken($details-2, 10%);
-    color: $details-5;
-    transform: scale(1.2, 1.2);
-    transition: .5s all ease-in;
-}
-.game-content i:active{
-    border: 1px solid $details-3;
-    border-radius: 50%;
-}
 //Game content
+
+
