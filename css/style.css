@@ -12,12 +12,12 @@ body {
   font-family: "Signika", sans-serif;
 }
 
-section {
+body section {
   padding: 0;
   margin: 0;
 }
 
-.container {
+body .container {
   max-width: 1140px;
   min-width: 300px;
   margin: 0 auto;
@@ -43,7 +43,13 @@ section {
   transform: translateX(-50%);
 }
 
-.guide-title {
+.guide-box {
+  border: 1px solid #000;
+  margin: 50px auto;
+  width: 50%;
+}
+
+.guide-box .guide-title {
   position: relative;
   font-size: 36px;
   margin-top: 10px;
@@ -51,7 +57,7 @@ section {
   color: #1A194D;
 }
 
-.guide-title::after {
+.guide-box .guide-title::after {
   position: absolute;
   content: ' ';
   width: 120px;
@@ -62,12 +68,6 @@ section {
   transform: translateX(-50%);
 }
 
-.guide-box {
-  border: 1px solid #000;
-  margin: 50px auto;
-  width: 50%;
-}
-
 .guide-box .guide-content {
   margin-bottom: 32px;
   padding-left: 9.6px;
@@ -76,6 +76,26 @@ section {
   list-style: none;
   font-family: "Signika", sans-serif;
   counter-reset: li;
+}
+
+.guide-box .guide-content .guide-item {
+  position: relative;
+  display: block;
+  padding: 6.4px 6.4px 6.4px 32px;
+  *padding: 6.4px;
+  margin: 8px 0;
+  background: #B7B6F7;
+  color: #0E0E38;
+  text-decoration: none;
+  border-radius: 4.8px;
+  transition: all .3s ease-out;
+  font-family: "Signika", sans-serif;
+}
+
+.guide-box .guide-content .guide-item:hover {
+  background: #1A194D;
+  color: #fff;
+  transition: all .3s ease-out;
 }
 
 .guide-box .guide-content .item::before {
@@ -100,26 +120,6 @@ section {
   transform: rotate(360deg);
 }
 
-.guide-box .guide-content .guide-item {
-  position: relative;
-  display: block;
-  padding: 6.4px 6.4px 6.4px 32px;
-  *padding: 6.4px;
-  margin: 8px 0;
-  background: #B7B6F7;
-  color: #0E0E38;
-  text-decoration: none;
-  border-radius: 4.8px;
-  transition: all .3s ease-out;
-  font-family: "Signika", sans-serif;
-}
-
-.guide-box .guide-content .guide-item:hover {
-  background: #1A194D;
-  color: #fff;
-  transition: all .3s ease-out;
-}
-
 .guide-box .guide-content .item-a {
   padding: 6px;
   text-align: center;
@@ -130,31 +130,6 @@ section {
 .guide-box .guide-content .item-a:hover {
   background: #1A194D;
   color: #B6F6F7;
-}
-
-.buttons {
-  margin-top: -25px;
-}
-
-button {
-  border: none;
-  font-size: 0;
-  background: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  margin: 0;
-  margin-bottom: 25px;
-}
-
-button:hover,
-button:focus {
-  border: none;
-  background: none;
-}
-
-button:focus {
-  outline: none;
 }
 
 .game-content i {
@@ -188,4 +163,29 @@ button:focus {
   border: 1px solid #000;
   border-radius: 50%;
 }
+
+.game-content .buttons {
+  margin-top: -25px;
+}
+
+.game-content .buttons button {
+  border: none;
+  font-size: 0;
+  background: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.game-content .buttons button:hover, .game-content .buttons button :focus {
+  border: none;
+  background: none;
+}
+
+.game-content .buttons button:focus {
+  outline: none;
+}
+
 /*# sourceMappingURL=style.css.map */
